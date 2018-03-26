@@ -1,5 +1,5 @@
 # ReactNativeAppMix
-混合多个ReactNative项目的尝试[iOS]
+混合多个ReactNative项目的尝试[iOS]<br>
 此文建议有一定ReactNative基础和iOS开发基础之后再阅读
 
     起因：<br>公司需要在一个平台类的RN项目中，通过跳转打开另外一个RN项目，但是并不想另外一个RN项目出现在手机桌面上,
