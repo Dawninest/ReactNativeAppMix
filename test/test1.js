@@ -3,7 +3,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  NativeModules
 } from 'react-native';
 
 export default class test1 extends Component {
@@ -12,6 +13,11 @@ export default class test1 extends Component {
       <View style={styles.container}>
         <Text style={styles.welcome} onPress={()=>{alert("test1")}}>
           Welcome to Test1!
+        </Text>
+        <Text style={styles.instructions} onPress={()=>{
+            NativeModules.PageManager.pop();
+        }}>
+          backPage
         </Text>
       </View>
     );

@@ -1,5 +1,5 @@
 //
-//  RNViewController.h
+//  NextViewController.h
 //  test
 //
 //  Created by 30san on 2018/3/26.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RNViewController : UIViewController
+@interface NextViewController : UIViewController
 
 
 @end
-
-
