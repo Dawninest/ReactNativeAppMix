@@ -29,7 +29,7 @@
     AppRegistry.registerComponent('test1', () => test1);
 
 然后把AppDelegate.m中启动ReactNative项目的代码拿到新的ViewController中，指定当前ViewController.view = rootView<br>
-在这个ViewController中，随便写一个touch方法作为事件响应，点击后也用同样的方法：
+在这个ViewController中，随便写一个跳转新ViewController方法作为事件响应，跳转后也用同样的方法：
 
     NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
@@ -39,12 +39,11 @@
     rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
     self.view = rootView;
 
-这次设置moduleName为test1，最后发现，是能够顺利切换ReactNative 项目的<br>
+这次设置moduleName为test1，最后发现，是能够顺利切换ReactNative 项目的，两个项目相互独立且互不影响<br>
 [试验代码已上传，RN版本0.48，需手动 npm install，不解答任何ReactNative运行报错，因为面向有RN基础的人嘛]
 
 ## 未解决/验证问题
-1.RN项目的 cmd+R / cmd+D 等一系列操作均无法使用了<br>
-2.RN的基础页 RCTRootView 是否是个单例，如果我在第一个ViewController加载了一个RN项目，通过Push的方法弹出新的ViewController来加载另外一个RN项目，此时，回到第一个 ViewController ，此时第一个 ViewController 上的RN项目是哪一个？
+多个RN项目之间的交互及多个RN项目运行的性能问题
 
 ## つづく
 
